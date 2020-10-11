@@ -40,7 +40,7 @@ public class Cat {
 
 		System.out.println(" Кот гуляет. ");
 
-	}
+	} 
 
 	public int getAge() {
 		return age;		

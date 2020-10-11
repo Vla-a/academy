@@ -6,8 +6,7 @@ public class Aplication {
 		Cat cat1 = new Cat();
 
 		Cat back = new Cat("back");
-
-		System.out.println("asdas");
+		
 
 		back.eat();
 
