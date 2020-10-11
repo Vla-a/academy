@@ -14,7 +14,7 @@ public class Aplication {
 
 		back.walk();
 
-		cat1.grow(2);
+		cat1.grow(1);
 
 		cat1.grow(4);
 
@@ -24,7 +24,7 @@ public class Aplication {
 		System.out.println(getAge);
 
 		double money = cat1.getMoney();
-		System.out.println(money);
+		 System.out.println(money);
 	}
 
 }

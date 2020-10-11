@@ -2,7 +2,7 @@ package by.academy.lesson1;
 
 public class Cat {
 	public int age=5;
-	double money=10;
+	double money=10.15;
 
 	public String nickname;
 
@@ -52,6 +52,7 @@ public class Cat {
 	
 	public double getMoney() {
 		return money;
+		
 	}
 	
 }
