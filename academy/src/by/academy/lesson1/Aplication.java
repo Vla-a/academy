@@ -5,14 +5,14 @@ public class Aplication {
 	public static void main(String[] args) {
 		Cat cat1 = new Cat();
 
-		Cat back = new Cat("back");
+		Cat bars = new Cat("bars");
 		
 
-		back.eat();
+		bars.eat();
 
-		back.sleep();
+		bars.sleep();
 
-		back.walk();
+		bars.walk();
 
 		cat1.grow(1);
 
@@ -25,6 +25,16 @@ public class Aplication {
 
 		double money = cat1.getMoney();
 		 System.out.println(money);
+		 
+		 cat1.setInitials();
+		 
+		 char getInitials = cat1.getInitials();
+		 System.out.println(getInitials);
+		 
+		 cat1.isHomeAnimals(true);
+		 
+		 boolean setIsHomeAnimals = cat1.setIsHomeAnimals();
+		 System.out.println("явл€етс€ ли домашним животным: "+setIsHomeAnimals);
 	}
 
 }

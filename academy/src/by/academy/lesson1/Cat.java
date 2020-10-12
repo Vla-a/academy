@@ -3,8 +3,9 @@ package by.academy.lesson1;
 public class Cat {
 	public int age=5;
 	double money=10.15;
-
-	public String nickname;
+	public String nickname; 
+	public char initials = 'F'; 
+	public boolean isHomeAnimals = true;
 
 	Cat() {
 
@@ -55,4 +56,22 @@ public class Cat {
 		
 	}
 	
+	public void setInitials() {		  
+		System.out.println(initials);
+	}
+	
+	public char getInitials() {
+		return initials;
+		
+	}
+	
+	public void isHomeAnimals(boolean isHomeAnimals) {		
+		System.out.println(isHomeAnimals);
+	      
+	}
+	
+	public boolean setIsHomeAnimals() {
+		return isHomeAnimals;
+		
+	}
 }
