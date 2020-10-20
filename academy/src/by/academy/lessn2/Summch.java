@@ -17,7 +17,7 @@ public class Summch {
 		int b = v.nextInt();
 		
 		int c = a +b;
-		System.out.print( " Сумма первого и второго чисел составит: " + c );
+		System.out.print( " Сумма двух чисел составит: " + c );
 	}
 
 }
