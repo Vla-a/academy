@@ -4,20 +4,16 @@ import java.util.Scanner;
 
 public class Summch {
 	
-	public static void main(String[] args) {
-		
-		
-		
-		
+	public static void main(String[] args) {		
 		
 		Scanner v = new Scanner(System.in);
 		System.out.print( " ¬ведите первое целое число: " );
 		int a = v.nextInt();
 		System.out.print( " ¬ведите второе целое число: " );
-		int b = v.nextInt();
+		int b = v.nextInt(); 
 		
 		int c = a +b;
-		System.out.print( " —умма двух чисел составит: " + c );
+		System.out.print( " sum of the two numbers is: " + c );
 	}
 
 }
