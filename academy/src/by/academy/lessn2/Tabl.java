@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Tabl {
 	
-	public static void main(String[] args) {
+	public static void  main(String[] args) {
 
 		Scanner console = new Scanner(System.in);
 
-		System.out.print("Введите число: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 
 		int a = console.nextInt();
 
