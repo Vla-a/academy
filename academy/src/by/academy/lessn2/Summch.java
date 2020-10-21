@@ -7,9 +7,9 @@ public class Summch {
 	public static void main(String[] args) {		
 		
 		Scanner v = new Scanner(System.in);
-		System.out.print( " Введите первое целое число: " );
+		System.out.print( " Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: " );
 		int a = v.nextInt();
-		System.out.print( " Введите второе целое число: " );
+		System.out.print( " Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: " );
 		int b = v.nextInt(); 
 		
 		int c = a +b;
