@@ -8,11 +8,11 @@ public static void main(String[] args) {
 
 Scanner console = new Scanner(System.in);
 
-System.out.print("Введите сумму покупки: ");
+System.out.print("Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ РїРѕРєСѓРїРєРё: ");
 
 double chek = console.nextDouble();
 
-System.out.print("Введите возраст: ");
+System.out.print("Р’Р°С€Р° РІРѕР·РІСЂР°С‚: ");
 
 int age = console.nextInt();
 
@@ -43,7 +43,7 @@ chek = chek * 80 / 100;
 }
 
 
-System.out.println("Ваша сумма: "+chek);
+System.out.println("Р’Р°С€Р° СЃСѓРјРјР°: "+chek);
 
 }
 
