@@ -1,10 +1,10 @@
 package by.academy.lesson1;
 
 public class Cat {
-	public int age=5;
-	double money=10.15;
-	public String nickname; 
-	public char initials = 'F'; 
+	public int age = 5;
+	double money = 10.15;
+	public String nickname;
+	public char initials = 'F';
 	public boolean isHomeAnimals = true;
 
 	Cat() {
@@ -21,57 +21,58 @@ public class Cat {
 
 		age = age + adage;
 
-		System.out.println(" Коту " + age + " лет. ");
+		System.out.println(" пїЅпїЅпїЅпїЅ " + age + " пїЅпїЅпїЅ. ");
 
 	}
 
 	public void sleep() {
 
-		System.out.println(" Кот спит. ");
+		System.out.println(" пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. ");
 
 	}
 
 	public void eat() {
 
-		System.out.println(" Кот ест. ");
+		System.out.println(" пїЅпїЅпїЅ пїЅпїЅпїЅ. ");
 
 	}
 
 	public void walk() {
 
-		System.out.println(" Кот гуляет. ");
+		System.out.println(" пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. ");
 
-	} 
+	}
 
 	public int getAge() {
-		return age;		
+		return age;
 
 	}
+
 	public void setMoney(double money) {
-		this.money = money; 
+		this.money = money;
 	}
-	
+
 	public double getMoney() {
 		return money;
-		
+
 	}
-	
-	public void setInitials() {		  
+
+	public void setInitials() {
 		System.out.println(initials);
 	}
-	
+
 	public char getInitials() {
 		return initials;
-		
+
 	}
-	
-	public void isHomeAnimals(boolean isHomeAnimals) {		
+
+	public void isHomeAnimals(boolean isHomeAnimals) {
 		System.out.println(isHomeAnimals);
-	      
+
 	}
-	
+
 	public boolean setIsHomeAnimals() {
 		return isHomeAnimals;
-		
+
 	}
 }
