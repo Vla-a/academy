@@ -26,7 +26,7 @@ public class Type {
 
 			break;
 
-		case "double":
+		case "double": 
 			double d = Double.parseDouble(age);
 			d = d * 70 / 100;
 
