@@ -14,31 +14,38 @@ public class Type {
 
 		System.out.println("Введите число: ");
 
-		int age = console.nextInt();
+		String age = console.nextLine();
 
 		switch (type) {
 
 		case "int":
+       int s = Integer.parseInt(age);
+			s = s % 2;
 
-			age = age % 2;
-
-			System.out.println("Ваш ответ: " + age);
+			System.out.println("Ваш ответ: " + s);
 
 			break;
 
 		case "double":
+			double d = Double.parseDouble(age);
+			d = d * 70 / 100;
 
-			age = age * 70 / 100;
-
-			System.out.println("Ваш ответ: " + age);
+			System.out.println("Ваш ответ: " + d);
 
 			break;
 
 		case "float":
-
+			float f = Float.parseFloat(age);
 			int a = 2;
 
-			System.out.println("Ваш ответ: " + Math.pow(age, a));
+			System.out.println("Ваш ответ: " + Math.pow(f, a));
+
+			break;
+			
+		case "char":
+			char h = (char) age.charAt(0);
+			
+			System.out.println("Ваш ответ: " + (int) h);
 
 			break;
 
