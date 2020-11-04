@@ -8,29 +8,29 @@ public class Type {
 
 		Scanner console = new Scanner(System.in);
 
-		System.out.print("Введите тип данных: ");
+		System.out.print("Р’РІРµРґРёС‚Рµ С‚РёРї: ");
 
 		String type = console.nextLine();
 
-		System.out.println("Введите число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ: ");
 
 		String age = console.nextLine();
 
 		switch (type) {
 
 		case "int":
-       int s = Integer.parseInt(age);
+			int s = Integer.parseInt(age);
 			s = s % 2;
 
-			System.out.println("Ваш ответ: " + s);
+			System.out.println("Р’Р°С€ РѕС‚РІРµС‚: " + s);
 
 			break;
 
-		case "double": 
+		case "double":
 			double d = Double.parseDouble(age);
 			d = d * 70 / 100;
 
-			System.out.println("Ваш ответ: " + d);
+			System.out.println("Р’Р°С€ РѕС‚РІРµС‚: " + d);
 
 			break;
 
@@ -38,14 +38,14 @@ public class Type {
 			float f = Float.parseFloat(age);
 			int a = 2;
 
-			System.out.println("Ваш ответ: " + Math.pow(f, a));
+			System.out.println("Р’Р°С€ РѕС‚РІРµС‚: " + Math.pow(f, a));
 
 			break;
-			
+
 		case "char":
 			char h = (char) age.charAt(0);
-			
-			System.out.println("Ваш ответ: " + (int) h);
+
+			System.out.println("Р’Р°С€ РѕС‚РІРµС‚: " + (int) h);
 
 			break;
 
