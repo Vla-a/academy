@@ -1,33 +1,42 @@
 package homework2;
+
 import java.util.Scanner;
+
 public class WordconsoleN {
 
-	public static void main(String[] args) {
+	private static int diffWords(String st) {
+		StringBuffer u = new StringBuffer();
+		String c;
+		for (int i = 0; i < st.length(); i++) {
+			c = String.valueOf(st.charAt(i));
+			if (u.indexOf(c) == -1)
+				u.append(c);
+		}
 
+		return u.length();
+	}
+
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 
-		String ar[] = new String[n];
-
+		String a[] = new String[n];
 		for (int i = 0; i < n; i++) {
-			ar[i] = sc.next();
-			System.out.print(ar[i] + " ");
+			a[i] = sc.next();
+
 		}
 
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
-				if (ar[i].length() < ar[j].length()) {
-					String s = ar[i];
-					ar[i] = ar[j];
-					ar[j] = s;
+		String goal = a[0];
 
-				}
+		for (int i = 0; i < a.length; i++) {
+
+			System.out.print(a[i] + " ");
+			if (diffWords(a[i]) < diffWords(goal)) {
+				goal = a[i];
 			}
-
 		}
-		int i = 0;
-		System.out.println();
 
-		System.out.println(ar[i]);
+		System.out.println("");
+		System.out.println("Слово: " + goal + ", Повторяющихся символов: " + diffWords(goal));
 	}
 }
