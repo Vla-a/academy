@@ -22,7 +22,7 @@ public class TwoWords {
 			String substr2 = B.substring(n3, n2);
 			System.out.print(substr1 + substr2);
 		} else {
-			System.out.println("Введите слово с четным количеством букв");
+			System.out.println("РћРґРЅРѕ РёР»Рё РѕР±Р° СЃР»РѕРІР° РёРјРµСЋС‚ РЅРµС‡РµС‚РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р±СѓРєРІ");
 		}
 
 	}
