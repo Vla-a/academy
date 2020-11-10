@@ -12,6 +12,7 @@ public class Cec {
 	}
 	
 	Cec(int Buy){
+		
 		Buy = Buy;
 	}
 	
