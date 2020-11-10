@@ -11,16 +11,16 @@ public class Words {
 			return false;
 		}
 
-		int[] letters = new int[256];
+		int[] let = new int[256];
 
-		char[] s_array = s.toCharArray();
-		for (char c : s_array) {
-			letters[c]++;
+		char[] ar = s.toCharArray();
+		for (char c : ar) {
+			let[c]++;
 		}
 
 		for (int i = 0; i < t.length(); i++) {
 			int c = (int) t.charAt(i);
-			if (--letters[c] < 0) {
+			if (--let[c] < 0) {
 				System.out.println(false);
 				return false;
 			}
