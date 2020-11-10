@@ -27,7 +27,7 @@ public class Cat {
 
 	public void sleep() {
 
-		System.out.println(" ��� ����. ");
+		System.out.println("Кот спит");
 
 	}
 
