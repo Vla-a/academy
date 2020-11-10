@@ -34,8 +34,8 @@ public class WordNConsole {
 				goal = a[i];
 			}
 		}
-
+		sc.close();
 		System.out.println("");
-		System.out.println("Слово: " + goal + ", не повторяющихся символов: " + diffWords(goal));
+		System.out.println("Р’Р°С€Рµ СЃР»РѕРІРѕ: " + goal);
 	}
 }
