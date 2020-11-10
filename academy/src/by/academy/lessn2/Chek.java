@@ -15,7 +15,7 @@ public class Chek {
 		System.out.print("Ваша возврат: ");
 
 		int age = console.nextInt();
-
+		
 		if (chek < 100) {
 
 			chek = chek * 95 / 100;
@@ -35,14 +35,15 @@ public class Chek {
 		} else if (chek >= 300 && chek < 400) {
 
 			chek = chek * 85 / 100;
-
+			
 		} else if (chek >= 400) {
 
 			chek = chek * 80 / 100;
 		}
 
 		System.out.println("Ваша сумма: " + chek);
-
+		
+		
 	}
-
+	
 }
