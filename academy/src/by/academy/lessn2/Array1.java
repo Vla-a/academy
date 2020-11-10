@@ -1,9 +1,9 @@
-package homework2;
+package by.academy.lessn2;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Solution {
+public class Array1 {
 	static int pairs(int k, int[] arr) {
 		int pairsCount = 0;
 
@@ -38,7 +38,7 @@ public class Solution {
 
 		for (int i = 0; i < n; i++) {
 			arr[i] = Integer.parseInt(arrItems[i]);
-			 System.out.println(arr[i]);
+			//System.out.println(arr[i]);
 		}
 
 		int result = pairs(k, arr);
