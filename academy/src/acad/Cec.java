@@ -8,7 +8,7 @@ public class Cec {
 	
 	
 	
-	Cec(){
+	Cec(){ 
 	}
 	
 	Cec(int Buy){
