@@ -35,6 +35,7 @@ public class Solution {
 
 		int[] arr = new int[n];
 
+		
 		String[] arrItems = scanner.nextLine().split(" ");
 
 		for (int i = 0; i < n; i++) {
