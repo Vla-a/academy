@@ -21,25 +21,25 @@ public class Cat {
 
 		age = age + adage;
 
-		System.out.println("РљРѕС‚Сѓ " + age + " Р»РµС‚");
+		System.out.println("Коту " + age + " лет");
 
 	}
 
 	public void sleep() {
 
-		System.out.println("РљРѕС‚ СЃРїРёС‚");
+		System.out.println("Кот спит");
 
 	}
 
 	public void eat() {
 
-		System.out.println("РљРѕС‚ РіСѓР»СЏРµС‚СЋ");
+		System.out.println("Кот ест");
 
 	}
 
 	public void walk() {
 
-		System.out.println("РљРѕС‚ СЃРїРёС‚.");
+		System.out.println("Кот гуляет");
 
 	}
 

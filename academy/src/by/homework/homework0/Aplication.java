@@ -33,6 +33,6 @@ public class Aplication {
 		cat1.isHomeAnimals(true);
 
 		boolean setIsHomeAnimals = cat1.setIsHomeAnimals();
-		System.out.println("�������� �� �������� ��������: " + setIsHomeAnimals);
+		System.out.println("Ваше значение" + setIsHomeAnimals);
 	}
 }
