@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Words {
 
-	public boolean permutation(String s, String t) {
+	public boolean perm(String s, String t) {
 		if (s.length() != t.length()) {
 			System.out.println(false);
 			return false;
@@ -35,7 +35,7 @@ public class Words {
 		String s = con.nextLine();
 		String t = con.nextLine();
 		Words comp = new Words();
-		comp.permutation(s.toLowerCase(), t.toLowerCase());
+		comp.perm(s.toLowerCase(), t.toLowerCase());
 		con.close();
 	}
 }

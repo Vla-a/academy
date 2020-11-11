@@ -13,7 +13,7 @@ public class Poker {
 		if (Player > 1 && Player < 7) {
 
 			int Kard = 5;
-			String[] suits = { "Пики", "Бубна", "Черви", "Трефи" };
+			String[] suits = { "Пики", "Бубна", "Черви", "Кристи" };
 
 			String[] och = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Валет", "Дама", "Король", "Туз" };
 			int n = suits.length * och.length;
