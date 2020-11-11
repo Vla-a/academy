@@ -12,7 +12,7 @@ public class Poker {
 		sc.close();
 		if (player > 1 && player < 7) {
 
-			int Kard = 5;
+			int kard = 5;
 			String[] suits = { "Пики", "Бубна", "Черви", "Кристи" };
 
 			String[] och = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Валет", "Дама", "Король", "Туз" };
@@ -34,9 +34,9 @@ public class Poker {
 
 			}
 
-			for (int i = 0; i < player * Kard; i++) {
+			for (int i = 0; i < player * kard; i++) {
 				System.out.println(SuitsOch[i]);
-				if (i % Kard == Kard - 1)
+				if (i % kard == kard - 1)
 					System.out.println();
 			}
 		} else {
