@@ -8,9 +8,9 @@ public class Poker {
 
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Введите количество игроков от 2 до 6: ");
-		int Player = sc.nextInt();
+		int player = sc.nextInt();
 		sc.close();
-		if (Player > 1 && Player < 7) {
+		if (player > 1 && player < 7) {
 
 			int Kard = 5;
 			String[] suits = { "Пики", "Бубна", "Черви", "Кристи" };
@@ -34,7 +34,7 @@ public class Poker {
 
 			}
 
-			for (int i = 0; i < Player * Kard; i++) {
+			for (int i = 0; i < player * Kard; i++) {
 				System.out.println(SuitsOch[i]);
 				if (i % Kard == Kard - 1)
 					System.out.println();
