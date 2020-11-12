@@ -9,10 +9,10 @@ public class WordNConsole {
 		String c;
 		for (int i = 0; i < st.length(); i++) {
 			c = String.valueOf(st.charAt(i));
-			if (u.indexOf(c) == -1)
+			if (u.indexOf(c) == -1) {
 				u.append(c);
+			}
 		}
-
 		return u.length();
 	}
 
@@ -25,7 +25,7 @@ public class WordNConsole {
 			a[i] = sc.next();
 
 		}
-
+		sc.close();
 		String goal = a[0];
 
 		for (int i = 0; i < a.length; i++) {
@@ -34,8 +34,7 @@ public class WordNConsole {
 				goal = a[i];
 			}
 		}
-		sc.close();
-		System.out.println("");
-		System.out.println("Ваше слово: " + goal);
+		
+		System.out.println("Ваше слово: " + goal + " Разных символов: " + diffWords(goal));
 	}
 }
