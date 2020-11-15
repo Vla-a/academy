@@ -31,6 +31,7 @@ public class Words {
 
 	public static void main(String[] args) {
 
+		
 		Scanner con = new Scanner(System.in);
 		String s = con.nextLine();
 		String t = con.nextLine();
