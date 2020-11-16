@@ -54,7 +54,7 @@ public class Deal {
 	public void result() {
 		double sum = 0;
 		for (Product product : products) {
-			sum += product.getPrice() * product.getQuantity();
+			//sum += product.getPrice() * product.getQuantity();
 		}
 		if (sum > buyer.getCash()) {
 			System.out.println("У вас не хватает денег ");
