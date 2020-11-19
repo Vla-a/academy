@@ -12,7 +12,7 @@ public class Aplicati implements Validator {
 		
 		System.out.println("Введите почту: ");
 		String d  = sc.next();
-		
+		sc.close();
 		AmericanPhoneValidator apv = new AmericanPhoneValidator();
 		System.out.println("Номер США: "+apv.isValid(str));
 		
