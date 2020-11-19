@@ -1,7 +1,6 @@
-package by.deals;
+package by.homework.homework3.deal;
 
 public class Deal {
-
 	String date;
 	Person seller;
 	Person buyer;
@@ -11,6 +10,8 @@ public class Deal {
 		super();
 	}
 
+	
+
 	public Deal(String date, Person seller, Person buyer, Product[] products) {
 		super();
 		this.date = date;
@@ -18,6 +19,8 @@ public class Deal {
 		this.buyer = buyer;
 		this.products = products;
 	}
+
+
 
 	public String getDate() {
 		return date;
@@ -54,10 +57,10 @@ public class Deal {
 	public void result() {
 		double sum = 0;
 		for (Product product : products) {
-			//sum += product.getPrice() * product.getQuantity();
+			sum += product.getPrice() * product.getQuantity();
 		}
 		if (sum > buyer.getCash()) {
-			System.out.println("РЈ РІР°СЃ РЅРµ С…РІР°С‚Р°РµС‚ РґРµРЅРµРі ");
+			System.out.println("Недостаточно средств! ");
 		} else {
 			printBill();
 		}
@@ -65,18 +68,19 @@ public class Deal {
 
 	private void printBill() {
 		double summ = 0;
-		System.out.println("Р’С‹РІРѕРґРёРј С‡РµРє ");
+		System.out.println("Сделка совершена ");
 		for (Product product : products) {
 			double totalProductPrice = product.getPrice() * product.getQuantity();
 			summ += totalProductPrice;
-			System.out.println("РЎС‚РѕРёРјРѕСЃС‚СЊ: " + product.getName() + " " + product.getPrice() + "*" + product.getQuantity()
-					+ "=" + totalProductPrice);
+			System.out.println("Имя: " + product.getProducerName() + " " + product.getPrice() + "X"
+					+ product.getQuantity() + "=" + totalProductPrice);
 		}
-		System.out.println("РЎСѓРјРјР° РїРѕРєСѓРїРєРё " + summ);
+		System.out.println("Сумма всей сделки " + summ);
 		buyer.setCash(buyer.getCash() - summ);
 		seller.setCash(seller.getCash() + summ);
-		System.out.println("Р”РµРЅСЊРіРё РїРѕРєСѓРїР°С‚РµР»СЏ " + buyer.getCash());
-		System.out.println("Р”РµРЅСЊРіРё РїСЂРѕРґРѕРІС†Р° " + seller.getCash());
+		System.out.println("Деньги покупателя " + buyer.getCash());
+		System.out.println("Деньги продавца " + seller.getCash());
 
 	}
+
 }

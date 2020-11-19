@@ -1,7 +1,8 @@
-package by.deals;
+package by.homework.homework3.deal;
 
 public class Person {
 
+	//public static final Validator americanPhoneValidator = new AmericanPhoneValidator();
 	String name;
 	double cash;
 
@@ -30,5 +31,4 @@ public class Person {
 	public void setCash(double cash) {
 		this.cash = cash;
 	}
-
 }
