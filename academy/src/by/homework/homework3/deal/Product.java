@@ -56,13 +56,13 @@ public class Product {
 	}
 
 	public double discount() {
-		if (quantity * price > 100) {
-			return 0.95;// 5% discount
+		if (quantity * price > 5) {
+			return 0.5;// 5% discount
 		}
 		return 1;
 	}
 
-	@Override
+	/*@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -114,5 +114,5 @@ public class Product {
 		builder.append(quantity);
 		builder.append("]");
 		return builder.toString();
-	}
+	}*/
 }

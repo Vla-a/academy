@@ -40,7 +40,7 @@ public class Milk extends Product {
 
 	@Override
 	public double discount() {
-		if (quantity > 10) {
+		if (quantity > 2) {
 			return MILK_DISCOUNT;
 		}
 		return 1;

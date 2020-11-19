@@ -1,8 +1,11 @@
 package by.homework.homework3.deal;
 
+
+
 public class Person {
 
-	//public static final Validator americanPhoneValidator = new AmericanPhoneValidator();
+	
+	//public static final Validator americanPhoneValidator = new AmericanPhoneValidator(s);
 	String name;
 	double cash;
 

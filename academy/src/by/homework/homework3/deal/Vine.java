@@ -8,8 +8,8 @@ public class Vine extends Product {
 
 	@Override
 	public double discount() {
-		if (quantity * price > 100) {
-			return 0.95;// 5% discount
+		if (quantity * price > 2) {
+			return 0.9;// 5% discount
 		}
 		return 1;
 	}

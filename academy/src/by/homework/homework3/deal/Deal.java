@@ -57,7 +57,7 @@ public class Deal {
 	public void result() {
 		double sum = 0;
 		for (Product product : products) {
-			sum += product.getPrice() * product.getQuantity();
+			sum += product.getPrice() * product.getQuantity() * product.discount();
 		}
 		if (sum > buyer.getCash()) {
 			System.out.println("Недостаточно средств! ");
@@ -70,9 +70,9 @@ public class Deal {
 		double summ = 0;
 		System.out.println("Сделка совершена ");
 		for (Product product : products) {
-			double totalProductPrice = product.getPrice() * product.getQuantity();
+			double totalProductPrice = product.getPrice() * product.getQuantity() * product.discount();
 			summ += totalProductPrice;
-			System.out.println("Имя: " + product.getProducerName() + " " + product.getPrice() + "X"
+			System.out.println("Продукт: " + product.getProducerName() + " " + product.getPrice() + "X"
 					+ product.getQuantity() + "=" + totalProductPrice);
 		}
 		System.out.println("Сумма всей сделки " + summ);
