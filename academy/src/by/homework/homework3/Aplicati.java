@@ -2,7 +2,7 @@ package by.homework.homework3;
 
 import java.util.Scanner;
 
-public class Aplicati {
+public class Aplicati implements Validator {
 
 	public static void main(String[] args) {
 		
@@ -19,12 +19,16 @@ public class Aplicati {
 		BelarusPhoneValidator aaa = new BelarusPhoneValidator();
 		System.out.println("Номер Беларуси: "+aaa.isValid(str));
 		
-		System.out.println(validMail(d));
+		Aplicati sss = new Aplicati();
+		System.out.println(sss.isValid(d));
 	}
 	
-	private static boolean validMail(String d) {
-        String regex = "\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*\\.\\w{2,4}"; 
-        return d.matches(regex);
+	
+
+	@Override
+	public boolean isValid(String str) {
+		 String regex = "\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*\\.\\w{2,4}"; 
+	        return str.matches(regex);
 	}
 
 }
