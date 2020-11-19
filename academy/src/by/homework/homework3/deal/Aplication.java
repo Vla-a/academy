@@ -6,10 +6,16 @@ public class Aplication {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		String s = sc.next();
+		System.out.println("Введите имя покупателя: ");
+		String sName = sc.next();
+		System.out.println("Введите имя продовца: ");
+		String bName = sc.next();
+		System.out.println("Введите сумму покупателя: ");
+		int viletS = sc.nextInt();
+		sc.close();
 		
-		Person seller = new Person(s, 200.00);
-		Person buyer = new Person("Petya", 300.00);
+		Person seller = new Person(sName, viletS);
+		Person buyer = new Person(bName, 300.00);
 
 		Product[] products = new Product[5];
 		products[0] = new Product(10.00, "fruits", "apple", 5);
@@ -22,7 +28,7 @@ public class Aplication {
 		Deal firstDeal = new Deal("1 January", buyer, seller, products);
 		firstDeal.result();
 		
-		System.out.println(seller.getName());
+		System.out.println("Покупатель: "+seller.getName() + " . Продавец: " + buyer.getName());
 //		for (Product p : products) {
 //			System.out.println("Name: " + p.getProducerName());
 //			System.out.println("Type: " + p.getType());
