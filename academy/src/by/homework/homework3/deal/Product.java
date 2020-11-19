@@ -1,7 +1,8 @@
 package by.homework.homework3.deal;
 
 public class Product {
-
+	
+	public static final double PRODUCT_DISCOUNT = 0.95;
 	protected double price;
 	protected String type;
 	protected String producerName;
@@ -56,8 +57,8 @@ public class Product {
 	}
 
 	public double discount() {
-		if (quantity * price > 5) {
-			return 0.5;// 5% discount
+		if (quantity * price > 100) {
+			return PRODUCT_DISCOUNT;// 5% discount
 		}
 		return 1;
 	}
