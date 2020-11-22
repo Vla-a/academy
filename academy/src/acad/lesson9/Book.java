@@ -9,4 +9,13 @@ public class Book implements Printable {
 		
 	}
 
+	public static void PrintBook(Printable[] printable) {
+		for (Printable Printable : printable) {
+			if (Printable instanceof Magazine ) {
+				System.out.println("Magazine");
+			}
+			
+		}
+	
+	}
 }
