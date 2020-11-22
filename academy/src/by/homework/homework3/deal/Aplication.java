@@ -14,14 +14,12 @@ public class Aplication {
 		System.out.println("¬ведите сумму покупател€: ");
 		int viletS = sc.nextInt();
 
-
 		Person pe = new Person();
 		pe.email();
 		pe.dateBir();
 		pe.validat();
 
-
-		 sc.close();
+		sc.close();
 
 		Person seller = new Person(sName, 0.00);
 		Person buyer = new Person(bName, viletS);
