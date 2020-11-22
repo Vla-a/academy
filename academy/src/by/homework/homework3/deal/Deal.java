@@ -122,6 +122,8 @@ public class Deal {
 			cal += p.calcTotalPrice();
 			System.out.println("Name: " + p.getProducerName());
 			System.out.println("Type: " + p.getType());
+			System.out.println("Количество: " + p.getQuantity());
+			System.out.println("Цена за шт.: " + p.getPrice());
 			System.out.println("Total Price: " + p.calcTotalPrice());
 			System.out.println("-----------------");
 		}

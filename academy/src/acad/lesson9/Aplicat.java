@@ -10,7 +10,11 @@ public class Aplicat {
           
 		Printable[] Printable = {m,b};
 		
-		
+		for(Printable printable: Printable) {
+			
+			System.out.println(printable);
+			
+		}
 		
 	   
 	}

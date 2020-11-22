@@ -19,7 +19,7 @@ public class Aplication {
 		pe.dateBir();
 		pe.validat();
 
-		sc.close();
+//		sc.close();
 
 		Person seller = new Person(sName, 0.00);
 		Person buyer = new Person(bName, viletS);
@@ -54,20 +54,58 @@ public class Aplication {
 		// System.out.println(((Milk) products[3]).getNonStaticMilkCount());
 //		 System.out.println(Milk.getMilkCount());
 		Deal deal = new Deal("21-11-2020", seller, buyer, products);
+		System.out.println(" Добавить продукт? 1 - да; другая - нет: ");
+		int dpr = sc.nextInt();
+		
+		while (dpr == 1) {
+			System.out.println("Введите какой продукт добавить: 0 - beef; 1 - Vine; 2 - Milk; ");
+			
+			int ame = sc.nextInt();
+switch (ame) {
+case 1:
+	System.out.println("Количество? ");
+	int col = sc.nextInt();
+	deal.addProduct(new Vine(15.00, "drinke", "Vine", col));
+	break;
+case 0:
+	System.out.println("Количество? ");
+	int co = sc.nextInt();
+	deal.addProduct(new Meat(17.00, "meat", "beef", co));
+	break;
+case 2:
+	System.out.println("Количество? ");
+	int c = sc.nextInt();
+	deal.addProduct(new Milk(10.00, "bacaleya", "Milka", c, "Blake"));
+	break;
+}
+			
+			System.out.println("Добавить продукт? 1 - да; другая - нет: ");
+			dpr = sc.nextInt();
+		}
 
-		deal.addProduct(new Meat(17.00, "meat", "beef", 3));
+//		deal.addProduct(new Meat(17.00, "meat", "beef", 3));
+//
+//		deal.addProduct(new Vine(15.00, "drinke", "Wine", 1));
 
-		deal.addProduct(new Vine(15.00, "drinke", "Wine", 1));
+//		deal.addProduct(new Milk(10.00, "bacaleya", "Milka", 2, "Blake"));
 
-		deal.addProduct(new Milk(10.00, "bacaleya", "Milka", 2, "Blake"));
 
-		deal.addProduct(new Product(10.00, "fruits", "apple", 3));
-
-		deal.addProduct(new Product(7.00, "fruits", "peach", 5));
 
 		deal.printProducts();
-		deal.deleteProduct(1);
-		deal.deleteProduct(2);
+		System.out.println(" удалить продукт? 1 - да; другая - нет: ");
+		int am = sc.nextInt();
+		
+		while (am == 1) {
+			System.out.println("Введите какой продукт удалить: 0 - beef; 1 - Vine; 2 - Milk; ");
+			
+			int ame = sc.nextInt();
+
+			deal.deleteProduct(ame);
+			System.out.println("\" удалить продукт? 1 - да; другая - нет: ");
+			am = sc.nextInt();
+		}
+		
+
 		System.out.println("---------------------------------------");
 		deal.printProducts();
 		deal.deal();
