@@ -1,16 +1,18 @@
 package by.homework.homework3.deal;
 
 public class Deal {
+
+	public final static int DEFAULT_PRODUCT_SIZE = 2;
 	String date;
 	Person seller;
 	Person buyer;
 	Product[] products;
+	private int productCounter;
+	double calc = 0;
 
 	public Deal() {
 		super();
 	}
-
-	
 
 	public Deal(String date, Person seller, Person buyer, Product[] products) {
 		super();
@@ -19,8 +21,6 @@ public class Deal {
 		this.buyer = buyer;
 		this.products = products;
 	}
-
-
 
 	public String getDate() {
 		return date;
@@ -78,6 +78,61 @@ public class Deal {
 		System.out.println("Сумма всей сделки " + summ);
 		buyer.setCash(buyer.getCash() - summ);
 		seller.setCash(seller.getCash() + summ);
+		System.out.println("Деньги покупателя " + buyer.getCash());
+		System.out.println("Деньги продавца " + seller.getCash());
+
+	}
+
+	public void addProduct(Product product) {
+
+		if (products == null) {
+			products = new Product[DEFAULT_PRODUCT_SIZE];
+		} else {
+			if (productCounter + 1 > products.length) {
+				expandProductArray();
+			}
+		}
+		products[productCounter++] = product;
+	}
+
+	public void deleteProduct(int index) {
+
+		if (index > products.length || index < 0) {
+			System.out.println("Index of bound");
+			return;
+		}
+		if (productCounter != index) {
+			System.arraycopy(products, index + 1, products, index, products.length - index - productCounter);
+		}
+		products[productCounter] = null;
+		productCounter--;
+	}
+
+	private void expandProductArray() {
+		Product[] tempArray = new Product[products.length * 2 + 1];
+		System.arraycopy(products, 0, tempArray, 0, products.length);
+		products = tempArray;
+	}
+
+	public void printProducts() {
+		double cal = 0;
+		for (int i = 0; i < productCounter; i++) {
+
+			Product p = products[i];
+			cal += p.calcTotalPrice();
+			System.out.println("Name: " + p.getProducerName());
+			System.out.println("Type: " + p.getType());
+			System.out.println("Total Price: " + p.calcTotalPrice());
+			System.out.println("-----------------");
+		}
+		calc = cal;
+	}
+
+	public void deal() {
+
+		System.out.println("Сумма всей сделки " + calc);
+		buyer.setCash(buyer.getCash() - calc);
+		seller.setCash(seller.getCash() + calc);
 		System.out.println("Деньги покупателя " + buyer.getCash());
 		System.out.println("Деньги продавца " + seller.getCash());
 

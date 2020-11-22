@@ -22,10 +22,10 @@ public class Meat extends Product {
 
 	@Override
 	public double discount() {
-		if (quantity > 4) {
-			return 0.8;
+		if (quantity > 10) {
+			return MEAT_DISCOUNT;
 		}
-		return MEAT_DISCOUNT;
+		return 1;
 
 	}
 
