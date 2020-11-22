@@ -7,11 +7,11 @@ public class Aplication {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Введите имя покупателя: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РїРѕРєСѓРїР°С‚РµР»СЏ: ");
 		String sName = sc.next();
-		System.out.println("Введите имя продовца: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ РїСЂРѕРґР°РІС†Р°: ");
 		String bName = sc.next();
-		System.out.println("Введите сумму покупателя: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ РїРѕРєСѓРїР°С‚РµР»СЏ: ");
 		int viletS = sc.nextInt();
 
 		Person pe = new Person();
@@ -42,7 +42,7 @@ public class Aplication {
 		 * Deal firstDeal = new Deal("1 oct", buyer, seller, products);
 		 * firstDeal.result();
 		 */
-		// System.out.println("Покупатель: "+seller.getName() + " . Продавец: " +
+		// System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: "+seller.getName() + " . пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " +
 		// buyer.getName());
 //		for (Product p : products) {
 //			System.out.println("Name: " + p.getProducerName());
@@ -54,32 +54,32 @@ public class Aplication {
 		// System.out.println(((Milk) products[3]).getNonStaticMilkCount());
 //		 System.out.println(Milk.getMilkCount());
 		Deal deal = new Deal("21-11-2020", seller, buyer, products);
-		System.out.println(" Добавить продукт? 1 - да; другая - нет: ");
+		System.out.println("Р”РѕР±Р°РІРёС‚СЊ РїСЂРѕРґСѓРєС‚? Р”Р° - 1; РќРµС‚ - 0 Рё С‚.Рґ.");
 		int dpr = sc.nextInt();
 		
 		while (dpr == 1) {
-			System.out.println("Введите какой продукт добавить: 0 - beef; 1 - Vine; 2 - Milk; ");
+			System.out.println("Р’С‹Р±РёСЂР°Р№ РїСЂРѕРґСѓРєС‚ РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ: beef - 0; Vine - 1; Milk - 2; ");
 			
 			int ame = sc.nextInt();
 switch (ame) {
 case 1:
-	System.out.println("Количество? ");
+	System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ?");
 	int col = sc.nextInt();
 	deal.addProduct(new Vine(15.00, "drinke", "Vine", col));
 	break;
 case 0:
-	System.out.println("Количество? ");
+	System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ?");
 	int co = sc.nextInt();
 	deal.addProduct(new Meat(17.00, "meat", "beef", co));
 	break;
 case 2:
-	System.out.println("Количество? ");
+	System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ?");
 	int c = sc.nextInt();
 	deal.addProduct(new Milk(10.00, "bacaleya", "Milka", c, "Blake"));
 	break;
 }
 			
-			System.out.println("Добавить продукт? 1 - да; другая - нет: ");
+			System.out.println("Р”РѕР±Р°РІРёС‚СЊ РїСЂРѕРґСѓРєС‚? Р”Р° - 1; РќРµС‚ - 0 Рё С‚.Рґ.");
 			dpr = sc.nextInt();
 		}
 
@@ -92,16 +92,16 @@ case 2:
 
 
 		deal.printProducts();
-		System.out.println(" удалить продукт? 1 - да; другая - нет: ");
+		System.out.println("РЈРґР°Р»РёС‚СЊ РїСЂРѕРґСѓРєС‚? Р”Р° - 1; РќРµС‚ - 0 Рё С‚.Рґ.");
 		int am = sc.nextInt();
 		
 		while (am == 1) {
-			System.out.println("Введите какой продукт удалить: 0 - beef; 1 - Vine; 2 - Milk; ");
+			System.out.println("Р’С‹Р±РёСЂР°Р№ РїСЂРѕРґСѓРєС‚ РґР»СЏ СѓРґРѕР»РµРЅРёСЏ: beef - 0; Vine - 1; Milk - 2; ");
 			
 			int ame = sc.nextInt();
 
 			deal.deleteProduct(ame);
-			System.out.println("\" удалить продукт? 1 - да; другая - нет: ");
+			System.out.println("РЈРґР°Р»РёС‚СЊ РїСЂРѕРґСѓРєС‚? Р”Р° - 1; РќРµС‚ - 0 Рё С‚.Рґ.");
 			am = sc.nextInt();
 		}
 		
@@ -114,8 +114,8 @@ case 2:
 		// Milk mtest = new Product(10.00, "fruits", "apple", 5, "Blake");
 
 		LocalDate today = LocalDate.now();
-		System.out.println("Дата начала сделки: " + today);
-		System.out.println("Дата окончания сделки: " + today.plusDays(10));
+		System.out.println("РќР°С‡Р°Р»Рѕ СЃРґРµР»РєРё: " + today);
+		System.out.println("РљРѕРЅРµС† СЃРґРµР»РєРё: " + today.plusDays(10));
 
 	}
 
