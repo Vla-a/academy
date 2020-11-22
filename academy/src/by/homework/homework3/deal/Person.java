@@ -44,7 +44,7 @@ public class Person {
 	Scanner s = new Scanner(System.in);
 
 	public void dateBir() {
-		System.out.println("Введите дату рождения: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ СЂРѕР¶РґРµРЅРёСЏ: ");
 
 		dateOfBirth = s.next();
 
@@ -52,30 +52,30 @@ public class Person {
 		dateB.prDate1(dateOfBirth);
 
 		while (!dateB.prDate1(dateOfBirth)) {
-			System.out.println("Не верный формат даты.Введите дату: ");
+			System.out.println("РќРµ РІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚. РџРѕРІС‚РѕСЂРёС‚Рµ: ");
 			dateOfBirth = s.next();
 
 		}
-		System.out.println("Ваша дата рождения: " + dateOfBirth);
+		System.out.println("Р’Р°С€Р° РґР°С‚Р° СЂРѕР¶РґРµРЅРёСЏ: " + dateOfBirth);
 
 	}
 
 	public void validat() {
 
-		System.out.println("Введите свой номер телефона в формате +375---------: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‚РµР»РµС„РѕРЅ РІ С„РѕСЂРјР°С‚Рµ +375---------: ");
 
 		String phone = s.next();
 		while (!belarusPhoneValidator.isValid(phone)) {
-			System.out.println("Не верный формат  телефона. Введите телефон: ");
+			System.out.println("РќРµ РІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚. РџРѕРІС‚РѕСЂРёС‚Рµ С‚.: ");
 			phone = s.next();
 		}
 	}
 
 	public void email() {
-		System.out.println("Введите свой email: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ СЃРІРѕР№ email: ");
 		String emai = s.next();
 		while (!Person.email.isValid(emai)) {
-			System.out.println("Не верный формат  email. Введите email: ");
+			System.out.println("РќРµ РІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚. РџРѕРІС‚РѕСЂРёС‚Рµ email: ");
 			emai = s.next();
 		}
 
