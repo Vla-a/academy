@@ -60,7 +60,7 @@ public class Deal {
 			sum += product.getPrice() * product.getQuantity() * product.discount();
 		}
 		if (sum > buyer.getCash()) {
-			System.out.println("Недостаточно средств! ");
+			System.out.println(("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЃСЂРµРґСЃС‚РІ! "));
 		} else {
 			printBill();
 		}
@@ -68,18 +68,18 @@ public class Deal {
 
 	private void printBill() {
 		double summ = 0;
-		System.out.println("Сделка совершена ");
+		System.out.println("РЎРґРµР»РєР° СЃРѕРІРµСЂС€РµРЅР° ");
 		for (Product product : products) {
 			double totalProductPrice = product.getPrice() * product.getQuantity() * product.discount();
 			summ += totalProductPrice;
-			System.out.println("Продукт: " + product.getProducerName() + " " + product.getPrice() + "X"
+			System.out.println("РџСЂРѕРґСѓРєС‚: " + product.getProducerName() + " " + product.getPrice() + "X"
 					+ product.getQuantity() + "=" + totalProductPrice);
 		}
-		System.out.println("Сумма всей сделки " + summ);
+		System.out.println(("РЎСѓРјРјР° РІСЃРµР№ СЃРґРµР»РєРё "  + summ));
 		buyer.setCash(buyer.getCash() - summ);
 		seller.setCash(seller.getCash() + summ);
-		System.out.println("Деньги покупателя " + buyer.getCash());
-		System.out.println("Деньги продавца " + seller.getCash());
+		System.out.println("РЎСѓРјРјР° РїРѕРєСѓРїР°С‚РµР»СЏ "  + buyer.getCash());
+		System.out.println("РЎСѓРјРјР° РїСЂРѕРґР°РІС†Р° "  + seller.getCash());
 
 	}
 
@@ -122,8 +122,8 @@ public class Deal {
 			cal += p.calcTotalPrice();
 			System.out.println("Name: " + p.getProducerName());
 			System.out.println("Type: " + p.getType());
-			System.out.println("Количество: " + p.getQuantity());
-			System.out.println("Цена за шт.: " + p.getPrice());
+			System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ" + p.getQuantity());
+			System.out.println("РЎС‚РѕРёРјРѕСЃС‚СЊ 1С€С‚." + p.getPrice());
 			System.out.println("Total Price: " + p.calcTotalPrice());
 			System.out.println("-----------------");
 		}
@@ -132,11 +132,11 @@ public class Deal {
 
 	public void deal() {
 
-		System.out.println("Сумма всей сделки " + calc);
+		System.out.println("РЎСѓРјРјР° РІСЃРµР№ СЃРґРµР»РєРё "  + calc);
 		buyer.setCash(buyer.getCash() - calc);
 		seller.setCash(seller.getCash() + calc);
-		System.out.println("Деньги покупателя " + buyer.getCash());
-		System.out.println("Деньги продавца " + seller.getCash());
+		System.out.println("РЎСѓРјРјР° РїРѕРєСѓРїР°С‚РµР»СЏ: " + buyer.getCash());
+		System.out.println("РЎСѓРјРјР° РїСЂРѕРґРѕРІС†Р°: " + seller.getCash());
 
 	}
 
