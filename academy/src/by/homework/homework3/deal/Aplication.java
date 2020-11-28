@@ -56,29 +56,29 @@ public class Aplication {
 		Deal deal = new Deal("21-11-2020", seller, buyer, products);
 		System.out.println("Добавить продукт? Да - 1; Нет - 0 и т.д.");
 		int dpr = sc.nextInt();
-		
+
 		while (dpr == 1) {
 			System.out.println("Выбирай продукт для добавления: beef - 0; Vine - 1; Milk - 2; ");
-			
+
 			int ame = sc.nextInt();
-switch (ame) {
-case 1:
-	System.out.println("Количество?");
-	int col = sc.nextInt();
-	deal.addProduct(new Vine(15.00, "drinke", "Vine", col));
-	break;
-case 0:
-	System.out.println("Количество?");
-	int co = sc.nextInt();
-	deal.addProduct(new Meat(17.00, "meat", "beef", co));
-	break;
-case 2:
-	System.out.println("Количество?");
-	int c = sc.nextInt();
-	deal.addProduct(new Milk(10.00, "bacaleya", "Milka", c, "Blake"));
-	break;
-}
-			
+			switch (ame) {
+			case 1:
+				System.out.println("Количество?");
+				int col = sc.nextInt();
+				deal.addProduct(new Vine(15.00, "drinke", "Vine", col));
+				break;
+			case 0:
+				System.out.println("Количество?");
+				int co = sc.nextInt();
+				deal.addProduct(new Meat(17.00, "meat", "beef", co));
+				break;
+			case 2:
+				System.out.println("Количество?");
+				int c = sc.nextInt();
+				deal.addProduct(new Milk(10.00, "bacaleya", "Milka", c, "Blake"));
+				break;
+			}
+
 			System.out.println("Добавить продукт? Да - 1; Нет - 0 и т.д.");
 			dpr = sc.nextInt();
 		}
@@ -89,22 +89,19 @@ case 2:
 
 //		deal.addProduct(new Milk(10.00, "bacaleya", "Milka", 2, "Blake"));
 
-
-
 		deal.printProducts();
 		System.out.println("Удалить продукт? Да - 1; Нет - 0 и т.д.");
 		int am = sc.nextInt();
-		
+
 		while (am == 1) {
 			System.out.println("Выбирай продукт для удоления: beef - 0; Vine - 1; Milk - 2; ");
-			
+
 			int ame = sc.nextInt();
 
 			deal.deleteProduct(ame);
 			System.out.println("Удалить продукт? Да - 1; Нет - 0 и т.д.");
 			am = sc.nextInt();
 		}
-		
 
 		System.out.println("---------------------------------------");
 		deal.printProducts();
@@ -113,10 +110,7 @@ case 2:
 		// Product pTest = new Milk(3.00, "fruits", "banana", 15, "black");
 		// Milk mtest = new Product(10.00, "fruits", "apple", 5, "Blake");
 
-		LocalDate today = LocalDate.now();
-		System.out.println("Начало сделки: " + today);
-		System.out.println("Конец сделки: " + today.plusDays(10));
-
+		deal.date();
 	}
 
 }

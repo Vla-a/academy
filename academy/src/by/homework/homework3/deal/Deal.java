@@ -1,5 +1,10 @@
 package by.homework.homework3.deal;
 
+import java.time.LocalDate;
+
+import by.homework.homework3.deal.annatation.Producer;
+
+@Producer(country = "New Zeland",founderFullName = "NewZelander",startYear = 1600)
 public class Deal {
 
 	public final static int DEFAULT_PRODUCT_SIZE = 2;
@@ -139,5 +144,10 @@ public class Deal {
 		System.out.println("Сумма продовца: " + seller.getCash());
 
 	}
-
+	
+	public static void date() {
+	LocalDate today = LocalDate.now();
+	System.out.println("Начало сделки: " + today);
+	System.out.println("Конец сделки: " + today.plusDays(10));
+	}
 }

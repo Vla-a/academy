@@ -2,7 +2,7 @@ package instryment;
 
 import by.homework.homework3.Validator;
 
-public class Main implements Instrument{
+public class Main {
 
 	public static void main(String... args) {
 	Gitara git =new Gitara();
@@ -25,9 +25,5 @@ public class Main implements Instrument{
 //	}
 	}
 	
-	@Override
-	public void play() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }
