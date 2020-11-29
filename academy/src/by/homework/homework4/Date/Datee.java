@@ -8,6 +8,7 @@ import java.util.GregorianCalendar;
 
 public class Datee {
 
+	
 	public int raznostDate(String s, String ss) throws ParseException {
 		 SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         Date date1 = dateFormat.parse(s);
@@ -27,7 +28,7 @@ public class Datee {
 	
 	        class Year {
 	
-	 String s;
+	// String s;
 	 
 	 public String  isLeapYear(int year) {
 		

@@ -1,7 +1,5 @@
 package by.homework.homework4.Mass;
 
-
-
 public class ArrayDemo {
 
 	public static void main(String[] args) {
@@ -19,19 +17,21 @@ public class ArrayDemo {
 		sm2.addProd(20);
 		sm2.chek();
 
-
 		System.out.println(sm2.getIndex(2));
-		
+
 		System.out.println(sm2.getFirst());
-		
+
 		System.out.println(sm2.length());
-		
-		
+
 		sm2.ltem(0);
 		sm2.chek();
-		
+
+		System.out.println(sm2.lastIndex());
+
 		System.out.println(sm2.getLast());
-		
+
+		sm2.remove(15);
+		sm2.chek();
 	}
 
 }

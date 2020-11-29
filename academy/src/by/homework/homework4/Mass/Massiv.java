@@ -3,10 +3,10 @@ package by.homework.homework4.Mass;
 public class Massiv<T> {
 
 	/*
-	 * Создать класс, который параметризуется любым типом (T). Имеет массив объектов
-	 * нашего типа T. Содержит пустой конструктор, который по дефолту инициализирует
-	 * пустой массив размерности 16. Содержит конструктор, принимающий значение int
-	 * и инитает им размер нашего массива.
+	 * РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ, РєРѕС‚РѕСЂС‹Р№ РїР°СЂР°РјРµС‚СЂРёР·СѓРµС‚СЃСЏ Р»СЋР±С‹Рј С‚РёРїРѕРј (T). РРјРµРµС‚ РјР°СЃСЃРёРІ РѕР±СЉРµРєС‚РѕРІ
+	 * РЅР°С€РµРіРѕ С‚РёРїР° T. РЎРѕРґРµСЂР¶РёС‚ РїСѓСЃС‚РѕР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ, РєРѕС‚РѕСЂС‹Р№ РїРѕ РґРµС„РѕР»С‚Сѓ РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚
+	 * РїСѓСЃС‚РѕР№ РјР°СЃСЃРёРІ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё 16. РЎРѕРґРµСЂР¶РёС‚ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ, РїСЂРёРЅРёРјР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёРµ int
+	 * Рё РёРЅРёС‚Р°РµС‚ РёРј СЂР°Р·РјРµСЂ РЅР°С€РµРіРѕ РјР°СЃСЃРёРІР°.
 	 */
 	public final static int DEFAULT_ARR_SIZE = 2;
 
@@ -16,16 +16,14 @@ public class Massiv<T> {
 	public Massiv() {
 
 		mas = (T[]) (new Object[16]);
-		
+
 	}
 
 	public Massiv(int a) {
 		mas = (T[]) (new Object[a]);
 	}
 
-	
-
-// проверка заполненного массива
+// Р’С‹РІРѕРґ РјР°СЃСЃРёРІР°
 	public void chek() {
 
 		for (int i = 0; i < mas.length; i++) {
@@ -36,8 +34,8 @@ public class Massiv<T> {
 
 	}
 
-// 1 добовление в массив объекта
-	public void addProd(T obg) {
+// 1) РґРѕР±Р°РІР»РµРЅРёСЏ РІ РЅР°С€ РјР°СЃСЃРёРІ РѕР±СЉРµРєС‚Р° С‚РёРїР° T - add(T obj) (РЅСѓР¶РЅРѕ РїРѕРјРЅРёС‚СЊ, С‡С‚Рѕ РµСЃР»Рё РјР°СЃСЃРёРІ Р·Р°РїРѕР»РЅРµРЅ, РЅР°Рј РЅСѓР¶РЅРѕ РµРіРѕ СЂР°СЃС€РёСЂРёС‚СЊ СЃ РїРѕРјРѕС‰СЊСЋ Arrays.copyOf)
+	public T addProd(T obg) {
 
 		if (mas == null) {
 
@@ -51,32 +49,57 @@ public class Massiv<T> {
 			}
 		}
 		mas[arrSize++] = obg;
+		return obg;
 	}
 
-	/*
-	 * public void deleteProd(int index) {
-	 * 
-	 * if (index > mas.length || index < 0) { System.out.println("Index of bound");
-	 * return; } if (arrSize != index) { System.arraycopy(mas, index, mas, index,
-	 * mas.length - index - 1); } mas[arrSize] = null; arrSize--; }
-	 */
-// 2 Вывод элемента по индексу
+// 2) РІР·СЏС‚РёРµ РїРѕ РёРЅРґРµРєСЃСѓ get(int i)
 	public T getIndex(int i) {
 
 		return (T) mas[i];
 	}
-	// 3 Вывод последнего добавленного элемента
+
+// 3) РІР·СЏС‚РёРµ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° getLast()
 	public T getLast() {
 		return (T) mas[mas.length - 1];
 	}
 
-	// 4 Вывод первого элемента
+// 4) РІР·СЏС‚РёРµ РїРµСЂРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° getFirst()
 	public T getFirst() {
 		return (T) mas[0];
 	}
 
-	// 5 Вывод размера массива
+// 5) РІС‹РІРѕРґ СЂР°Р·РјРµСЂР° РјР°СЃСЃРёРІР°
 	public int length() {
 		return mas.length;
+	}
+
+// 6) РІС‹РІРѕРґ РёРЅРґРµРєСЃР° РїРѕСЃР»РµРґРЅРµРіРѕ Р·Р°РїРѕР»РЅРµРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° (РЅРµ РїСѓС‚Р°С‚СЊ СЃ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊСЋ)
+	public int lastIndex() {
+		int s = 0;
+		for (int i = 0; i < mas.length; i++)
+			if (mas[i] == null) {
+				s = i - 1;
+				break;
+			}
+		return s;
+	}
+
+// 7) СѓРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РїРѕ РёРЅРґРµРєСЃСѓ (remove(int i)
+	public void ltem(int index) {
+
+		T[] tempArray = (T[]) (new Object[mas.length - 1]);
+		System.arraycopy(mas, 0, tempArray, 0, mas.length - 1);
+		System.arraycopy(mas, index + 1, tempArray, index, mas.length - index - 1);
+		mas = (T[]) tempArray;
+
+	}
+
+//	8) СѓРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РїРѕ Р·РЅР°С‡РµРЅРёСЋ (remove(T obj))
+	public void remove(T obg) {
+		for (int i = 0; i < mas.length; i++)
+			if (mas[i] == obg) {
+				ltem(i);
+			}
+
 	}
 }
