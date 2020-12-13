@@ -1,28 +1,20 @@
 package acad.close;
 
-public class Skirt extends Clothes implements  WomanClose {
+public class Skirt extends Clothes implements IFemaleClothes {
+    public Skirt(Sizes size, String color) {
+        super(size, color);
+    }
 
-	
-	
-	public Skirt() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    public Skirt(Sizes size, String color, double cost) {
+        super(size, color, cost);
+    }
 
-	public Skirt(int size, String collor, double cost) {
-		super(size, collor, cost);
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public void dressWoman() {
-		System.out.println("∆ÂÌ˘ËÌ‡ Ó‰ÂÚ‡");
-		
-	}
-
-	
-	
-		
-	
-
+    @Override
+    public String toString() {
+        return "–Æ–±–∫–∞{" +
+                "—Ä–∞–∑–º–µ—Ä = " + getSize() +
+                ", —Ü–µ–Ω–∞ = " + getCost() + " –≥—Ä–Ω" +
+                ", —Ü–≤–µ—Ç = " + getColor() +
+                "}";
+    }
 }

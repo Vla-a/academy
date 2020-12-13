@@ -70,7 +70,7 @@ public class Massiv<T> {
 
 // 5) вывод размера массива
 	public int length() {
-		return mas.length;
+		return  mas.length;
 	}
 
 // 6) вывод индекса последнего заполненого элемента (не путать с размерностью)

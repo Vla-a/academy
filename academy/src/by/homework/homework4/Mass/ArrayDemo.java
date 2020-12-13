@@ -7,7 +7,7 @@ public class ArrayDemo {
 		Massiv<Integer> mm1 = new Massiv<>();
 		Massiv<Integer> mm2 = new Massiv<>();
 		Massiv<Integer> mm3 = new Massiv<>();
-		Massiv<Integer> sm1 = new Massiv<>(4);
+		Massiv<String> sm1 = new Massiv<>(4);
 		Massiv<Integer> sm2 = new Massiv<>(5);
 
 		System.out.println(mm1.getLast());
@@ -15,7 +15,8 @@ public class ArrayDemo {
 		sm2.addProd(10);
 		sm2.addProd(15);
 		sm2.addProd(20);
-		sm2.chek();
+		
+		
 
 		System.out.println(sm2.getIndex(2));
 
@@ -30,7 +31,7 @@ public class ArrayDemo {
 
 		System.out.println(sm2.getLast());
 
-		sm2.remove(15);
+		sm2.remove(20);
 		sm2.chek();
 	}
 
