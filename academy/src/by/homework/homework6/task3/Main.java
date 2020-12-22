@@ -1,11 +1,10 @@
-package by.homework.homework6;
+package by.homework.homework6.task3;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import by.homework.homework6.task3.User;
 
 public class Main {
 
