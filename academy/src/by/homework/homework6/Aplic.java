@@ -59,7 +59,7 @@ public class Aplic {
 		try (FileWriter ff = new FileWriter(fol)) {
 			for (File file : folder.listFiles()) {
 				System.out.println(file.getName());
-				ff.write(file.getName());
+				ff.write(file.getName()+ ", size: " + file.length()+ "\n");
 			}
 
 		}
