@@ -1,5 +1,6 @@
 package by.homework.homework6;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -26,27 +27,35 @@ public class Task2 {
 		if (!src.exists()) {
 			return;
 		}
-		char[] arr = new char[1024];
-		int j = 0;
-		StringBuilder str = new StringBuilder();
-		try (FileReader fr = new FileReader(src)) {
-			while ((j = fr.read(arr)) > 0) {
-				str.append(arr);
-			}
-		}
-		System.out.println(str);
-		String[] word = str.toString().split(" ");
-		System.out.println(word.length);
 
-		BufferedWriter outputWriter = null;
-		outputWriter = new BufferedWriter(new FileWriter(file));
-		for (int i = 0; i < word.length; i++) {
+		StringBuilder stBuild = new StringBuilder();
 
-			outputWriter.write(word[i] + "");
+		char[] array = new char[576];
+
+		try (BufferedReader bufRead = new BufferedReader(new FileReader(src))) {
+
+			while ((bufRead.read(array)) > 0)
+				;
+
+			stBuild.append(array);
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
 
 		}
-		outputWriter.flush();
-		outputWriter.close();
+
+		String outStr = stBuild.toString();
+
+		try (BufferedWriter bufWrite = new BufferedWriter(new FileWriter(file))) {
+
+			bufWrite.write(outStr.replaceAll("\\s", ""));
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
 	}
 
 }

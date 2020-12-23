@@ -24,7 +24,7 @@ public class Aplic {
 		if (!src.exists()) {
 			return;
 		}
-		char[] arr = new char[1024];
+		char[] arr = new char[576];
 		int j = 0;
 		StringBuilder str = new StringBuilder();
 		try (FileReader fr = new FileReader(src)) {
@@ -33,10 +33,9 @@ public class Aplic {
 			}
 		}
 
-		System.out.println(str);
+		System.out.println(str.length());
 
-		String word = str.toString();
-		System.out.println(word.length());
+
 
 		for (int i = 0; i < 100; i++) {
 			File file = new File(dir, (i + 1) + ".txt");
@@ -48,7 +47,7 @@ public class Aplic {
 			try (FileWriter fw = new FileWriter(file)) {
 
 				int maz = (int) (Math.random() * 537);
-				fw.write(word.substring(0, maz) + "");
+				fw.write(str.substring(0, maz) + "");
 
 			}
 
