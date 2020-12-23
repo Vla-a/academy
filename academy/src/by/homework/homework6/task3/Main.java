@@ -1,9 +1,8 @@
 package by.homework.homework6.task3;
 
 import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Main {
@@ -24,7 +23,8 @@ public class Main {
 
 		System.out.println(ar.toString());
 
-		File dir = new File("C:\\Users\\Пользователь\\git\\academy\\academy\\src\\by\\homework\\homework6\\task3\\Users");
+		File dir = new File(
+				"C:\\Users\\Пользователь\\git\\academy\\academy\\src\\by\\homework\\homework6\\task3\\Users");
 		if (!dir.exists()) {
 			dir.mkdir();
 		}
@@ -36,15 +36,13 @@ public class Main {
 
 				file.createNewFile();
 			}
-			try (FileOutputStream outputStream = new FileOutputStream(file);
-					ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);) {
 
-				objectOutputStream.writeObject(per);
+			try (FileWriter fw = new FileWriter(file)) {
+				fw.write(per.toString());
 			} catch (Exception e) {
 
-				System.err.println(e.getMessage());
-			} 
-
+				System.out.println(e.getMessage());
+			}
 		}
 	}
 }
