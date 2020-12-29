@@ -12,7 +12,7 @@ public class Person {
 	protected String dateOfBirth;
 	
 	
-	@Pep(name = "Socs")
+	
 
 	public String getFirstName() {
 		return firstName;
@@ -47,8 +47,6 @@ public class Person {
 		
 	}
 
-	protected void slepp( ) {
-		System.out.println("Человек спит");
-	}
+	
 
 }

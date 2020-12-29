@@ -1,83 +1,238 @@
 package by.homework.homework7.Task2;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import by.academy.lesson15.Tigr;
+
 
 public class Main {
 
-	public static void main(String[] args)  {
+	public static void main(String[] args) {
 
-		Class<Person> pers = Person.class;
+		User user = new User("Vlad", "123d", "vl@mail.ru");
+
+		Class<User> pers = User.class;
+
 		Method[] methods = pers.getMethods();
+
 		System.out.println("-----------------------");
-		System.out.println("Declared method: ");
+
+		System.out.println("Method: ");
+
 		System.out.println("-----------------------");
+
 		for (Method method : methods) {
 
 			System.out.println(method.getName());
+
+		}
+
+		try {
+
+			Method meth = pers.getMethod("printUserInfo");
+
+			System.out.println("-----------------------");
+
+			System.out.println("Method name is: " + meth.getName());
+
+		} catch (NoSuchMethodException | SecurityException e1) {
+
+			System.out.println("-----------------------");
+
+			System.out.println("There is no public methods! ");
+
+		}
+
+		Field[] fieldd = pers.getFields();
+
+		System.out.println("-----------------------");
+
+		System.out.println("Field: ");
+
+		System.out.println("-----------------------");
+
+		for (Field f : fieldd) {
+
+			System.out.println(f.getName());
+
+		}
+
+		try {
+
+			Field fiell = pers.getDeclaredField("login");
+
+			String loginValue = (String) fiell.get(user);
+
+			System.out.println("-----------------------");
+
+			System.out.println("Field name is: " + loginValue);
+
+			System.out.println("-----------------------");
+
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+
+			e.printStackTrace();
+
 		}
 
 		Method[] methodss = pers.getDeclaredMethods();
+
+		System.out.println("DeclaredMethod: ");
+
 		System.out.println("-----------------------");
-		System.out.println("method: ");
-		System.out.println("-----------------------");
+
 		for (Method method : methodss) {
 
 			System.out.println(method.getName());
+
 		}
-//	
+
+		try {
+
+			Method declareMethod = pers.getDeclaredMethod("printUserInfo");
+
+			System.out.println("-----------------------");
+
+			System.out.println("DeclaredMethod name is: " + declareMethod.getName());
+
+			System.out.println("-----------------------");
+
+		} catch (NoSuchMethodException | SecurityException e) {
+
+			e.printStackTrace();
+
+		}
+
+		Field[] fielddd = pers.getDeclaredFields(); // getDeclaredFields()
+
+		System.out.println("DeclaredFields: ");
+
+		System.out.println("-----------------------");
+
+		for (Field fiel : fielddd) {
+
+			System.out.println(fiel.getName());
+
+		}
+
+		try {
+
+			Field field = pers.getDeclaredField("password");
+
+			field.setAccessible(true);
+
+			String passwordValue = (String) field.get(user);
+
+			System.out.println("-----------------------");
+
+			System.out.println("DeclaredFields name is: " + passwordValue);
+
+			System.out.println("-----------------------");
+
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+
+			e.printStackTrace();
+
+		}
+
+		try {
+
+			Field fiel = pers.getDeclaredField("login");
+
+			fiel.setAccessible(true);
+
+			String loginValue = (String) fiel.get(user);
+
+			System.out.println("DeclaredFields name is: " + loginValue);
+
+			System.out.println("-----------------------");
+
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+
+			e.printStackTrace();
+
+		}
+
+		System.out.println("set метод класса Field: ");
+
+		System.out.println("-----------------------");
+
+		try {
+
+			Field setFiel = pers.getField("login");
+
+			setFiel.setAccessible(true);
+
+			setFiel.set(user, "Vlad");
+
+			String log = (String) setFiel.get(user);
+
+			System.out.println("Login is: " + log);
+
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+
+			e.printStackTrace();
+
+		}
+
+		try {
+
+			Field setField = pers.getField("password");
+
+			setField.setAccessible(true);
+
+			setField.set(user, "123d");
+
+			String pas = (String) setField.get(user);
+
+			System.out.println("Password is: " + pas);
+
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+
+			e.printStackTrace();
+
+		}
+
+		try {
+
+			Field setFie = pers.getDeclaredField("email");
+
+			setFie.setAccessible(true);
+
+			setFie.set(user, "vl@mail.ru");
+
+			String emai = (String) setFie.get(user);
+
+			System.out.println("Email is: " + emai);
+
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+
+			e.printStackTrace();
+
+		}
 
 		System.out.println("----------------");
+
 		try {
-			
-			Person per = pers.getDeclaredConstructor().newInstance();			
-		Method mPrint = pers.getDeclaredMethod("slepp");					
-		mPrint.setAccessible(true);
+
+			System.out.println("toString через invoke:");
+
+			User per = pers.getDeclaredConstructor().newInstance();
+
+			Method mPrint = pers.getDeclaredMethod("printUserInfo");
+
+			mPrint.setAccessible(true);
+
 			mPrint.invoke(per);
-		
 
-//			Pep pep = mPrint.getAnnotation(Pep.class);
-//			System.out.println(pep.name());
-		} catch (NoSuchMethodException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | SecurityException e) {
-			// TODO Auto-generated catch block
+		} catch (NoSuchMethodException | InstantiationException | IllegalAccessException | IllegalArgumentException
+
+				| InvocationTargetException | SecurityException e) {
+
 			e.printStackTrace();
-		}
 
-		System.out.println("----------------");
-		try {
-			
-			Person perso = pers.getConstructor().newInstance();			
-		Method mPrin = pers.getMethod("slepp");					
-		mPrin.setAccessible(true);
-			mPrin.invoke(perso);
-
-		} catch (NoSuchMethodException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | SecurityException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-		
-		
-//		Class<User> user = User.class;
-//		Method[] methodsUser = user.getMethods();
-//		System.out.println("-----------------------");
-//		System.out.println("Declared method: ");
-//		System.out.println("-----------------------");
-//		for (Method method : methodsUser) {
-//
-//			System.out.println(method.getName());
-//		}
-//		Method[] methodssUser = user.getDeclaredMethods();
-//		System.out.println("-----------------------");
-//		System.out.println("method: ");
-//		System.out.println("-----------------------");
-//		for (Method method : methodssUser) {
-//
-//			System.out.println(method.getName());
-//		}
 
 	}
 

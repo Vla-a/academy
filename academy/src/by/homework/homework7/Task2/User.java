@@ -2,9 +2,16 @@ package by.homework.homework7.Task2;
 
 public class User extends Person {
 
-	private String login; 
+	public String login; 
 	public String password;
-	protected int String;
+	private String email;
+	
+	public User(String login, String password, String email) {
+		super();
+		this.login = login;
+		this.password = password;
+		this.email = email;
+	}
 	public String getLogin() {
 		return login;
 	}
@@ -17,15 +24,18 @@ public class User extends Person {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getString() {
-		return String;
+	public String getEmail() {
+		return email;
 	}
-	public void setString(int string) {
-		String = string;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	 void printUserInfo() {
+		System.out.println("printUserInfo");
 	}
 	
-	public void printUserInfo( ) {
-		System.out.println("Person");
-	}
+	
+
 	
 }
