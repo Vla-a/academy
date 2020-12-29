@@ -4,8 +4,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -160,7 +158,7 @@ public class Main {
 
 		try {
 
-			Field setFiel = pers.getField("login");
+			Field setFiel = pers.getDeclaredField("login");
 
 			setFiel.setAccessible(true);
 
@@ -178,7 +176,7 @@ public class Main {
 
 		try {
 
-			Field setField = pers.getField("password");
+			Field setField = pers.getDeclaredField("password");
 
 			setField.setAccessible(true);
 
@@ -213,27 +211,22 @@ public class Main {
 		}
 
 		System.out.println("----------------");
+		System.out.println("toString через invoke:");
 
 		try {
-
-			System.out.println("toString через invoke:");
-
-			User per = pers.getDeclaredConstructor().newInstance();
 
 			Method mPrint = pers.getDeclaredMethod("printUserInfo");
 
 			mPrint.setAccessible(true);
 
-			mPrint.invoke(per);
+			mPrint.invoke(user);
 
-		} catch (NoSuchMethodException | InstantiationException | IllegalAccessException | IllegalArgumentException
+		} catch (NoSuchMethodException | IllegalAccessException | IllegalArgumentException
 
 				| InvocationTargetException | SecurityException e) {
 
 			e.printStackTrace();
 
 		}
-
 	}
-
 }

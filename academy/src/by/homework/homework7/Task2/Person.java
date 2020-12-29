@@ -8,11 +8,8 @@ public class Person {
 
 	public String firstName;
 	public String lastName;
-	protected int age;
+	private int age;
 	protected String dateOfBirth;
-	
-	
-	
 
 	public String getFirstName() {
 		return firstName;
@@ -44,9 +41,7 @@ public class Person {
 
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
-		
-	}
 
-	
+	}
 
 }
