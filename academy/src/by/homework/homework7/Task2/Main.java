@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void  main(String[] args) {
 
 		User user = new User("Vlad", "123d", "vl@mail.ru");
 
